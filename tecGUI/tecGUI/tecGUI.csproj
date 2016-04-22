@@ -79,6 +79,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\certWarning\certWarning.csproj">
+      <Project>{6925d569-6a6d-43a4-99cb-f62b59a9d8aa}</Project>
+      <Name>certWarning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dataEntry\dataEntry.csproj">
+      <Project>{2db966ef-b0c4-4c5a-83c8-39c89fec28fa}</Project>
+      <Name>dataEntry</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pushToExt\pushToExt.csproj">
+      <Project>{0db24311-7c87-4ec6-8b0f-65c818b8fd49}</Project>
+      <Name>pushToExt</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

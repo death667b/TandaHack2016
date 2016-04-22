@@ -45,7 +45,7 @@
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.taxFileLabel = new System.Windows.Forms.Label();
             this.TaxFileTextBox = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.taxTableComboBox = new System.Windows.Forms.ComboBox();
             this.taxTableLabel = new System.Windows.Forms.Label();
             this.bsbLabel = new System.Windows.Forms.Label();
             this.bsbTextBox = new System.Windows.Forms.TextBox();
@@ -57,6 +57,18 @@
             this.stateTextBox = new System.Windows.Forms.TextBox();
             this.postcodeLabel = new System.Windows.Forms.Label();
             this.postcodeTextBox = new System.Windows.Forms.TextBox();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.startDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.startDateLabel = new System.Windows.Forms.Label();
+            this.empBasisComboBox = new System.Windows.Forms.ComboBox();
+            this.employBasisLabel = new System.Windows.Forms.Label();
+            this.employCatComboBox = new System.Windows.Forms.ComboBox();
+            this.employmentCatLabel = new System.Windows.Forms.Label();
+            this.empStatusComboBox = new System.Windows.Forms.ComboBox();
+            this.empStatusLabel = new System.Windows.Forms.Label();
+            this.payslipComboBox = new System.Windows.Forms.ComboBox();
+            this.payslipLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -67,6 +79,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lastNameTextBox
             // 
@@ -190,7 +203,7 @@
             // 
             this.taxFileLabel.AutoSize = true;
             this.taxFileLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.taxFileLabel.Location = new System.Drawing.Point(681, 103);
+            this.taxFileLabel.Location = new System.Drawing.Point(681, 332);
             this.taxFileLabel.Name = "taxFileLabel";
             this.taxFileLabel.Size = new System.Drawing.Size(111, 17);
             this.taxFileLabel.TabIndex = 17;
@@ -198,26 +211,26 @@
             // 
             // TaxFileTextBox
             // 
-            this.TaxFileTextBox.Location = new System.Drawing.Point(801, 103);
+            this.TaxFileTextBox.Location = new System.Drawing.Point(801, 332);
             this.TaxFileTextBox.Name = "TaxFileTextBox";
             this.TaxFileTextBox.Size = new System.Drawing.Size(205, 22);
             this.TaxFileTextBox.TabIndex = 16;
             // 
-            // comboBox1
+            // taxTableComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.taxTableComboBox.FormattingEnabled = true;
+            this.taxTableComboBox.Items.AddRange(new object[] {
             "Tax Free Threshold",
             "Non-Tax Free Threshold"});
-            this.comboBox1.Location = new System.Drawing.Point(801, 144);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 19;
+            this.taxTableComboBox.Location = new System.Drawing.Point(801, 368);
+            this.taxTableComboBox.Name = "taxTableComboBox";
+            this.taxTableComboBox.Size = new System.Drawing.Size(121, 24);
+            this.taxTableComboBox.TabIndex = 19;
             // 
             // taxTableLabel
             // 
             this.taxTableLabel.AutoSize = true;
-            this.taxTableLabel.Location = new System.Drawing.Point(681, 144);
+            this.taxTableLabel.Location = new System.Drawing.Point(681, 368);
             this.taxTableLabel.Name = "taxTableLabel";
             this.taxTableLabel.Size = new System.Drawing.Size(71, 17);
             this.taxTableLabel.TabIndex = 18;
@@ -305,11 +318,137 @@
             this.postcodeTextBox.Size = new System.Drawing.Size(85, 22);
             this.postcodeTextBox.TabIndex = 28;
             // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Location = new System.Drawing.Point(681, 108);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(42, 17);
+            this.emailLabel.TabIndex = 31;
+            this.emailLabel.Text = "Email";
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.Location = new System.Drawing.Point(801, 108);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(205, 22);
+            this.emailTextBox.TabIndex = 30;
+            // 
+            // startDatePicker
+            // 
+            this.startDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.startDatePicker.Location = new System.Drawing.Point(801, 411);
+            this.startDatePicker.Name = "startDatePicker";
+            this.startDatePicker.Size = new System.Drawing.Size(200, 22);
+            this.startDatePicker.TabIndex = 33;
+            // 
+            // startDateLabel
+            // 
+            this.startDateLabel.AutoSize = true;
+            this.startDateLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.startDateLabel.Location = new System.Drawing.Point(681, 411);
+            this.startDateLabel.Name = "startDateLabel";
+            this.startDateLabel.Size = new System.Drawing.Size(72, 17);
+            this.startDateLabel.TabIndex = 32;
+            this.startDateLabel.Text = "Start Date";
+            // 
+            // empBasisComboBox
+            // 
+            this.empBasisComboBox.FormattingEnabled = true;
+            this.empBasisComboBox.Items.AddRange(new object[] {
+            "Individual",
+            "Contract"});
+            this.empBasisComboBox.Location = new System.Drawing.Point(852, 194);
+            this.empBasisComboBox.Name = "empBasisComboBox";
+            this.empBasisComboBox.Size = new System.Drawing.Size(121, 24);
+            this.empBasisComboBox.TabIndex = 35;
+            // 
+            // employBasisLabel
+            // 
+            this.employBasisLabel.AutoSize = true;
+            this.employBasisLabel.Location = new System.Drawing.Point(681, 194);
+            this.employBasisLabel.Name = "employBasisLabel";
+            this.employBasisLabel.Size = new System.Drawing.Size(123, 17);
+            this.employBasisLabel.TabIndex = 34;
+            this.employBasisLabel.Text = "Employment Basis";
+            // 
+            // employCatComboBox
+            // 
+            this.employCatComboBox.FormattingEnabled = true;
+            this.employCatComboBox.Items.AddRange(new object[] {
+            "Permanent",
+            "Casual"});
+            this.employCatComboBox.Location = new System.Drawing.Point(852, 221);
+            this.employCatComboBox.Name = "employCatComboBox";
+            this.employCatComboBox.Size = new System.Drawing.Size(121, 24);
+            this.employCatComboBox.TabIndex = 37;
+            // 
+            // employmentCatLabel
+            // 
+            this.employmentCatLabel.AutoSize = true;
+            this.employmentCatLabel.Location = new System.Drawing.Point(681, 221);
+            this.employmentCatLabel.Name = "employmentCatLabel";
+            this.employmentCatLabel.Size = new System.Drawing.Size(146, 17);
+            this.employmentCatLabel.TabIndex = 36;
+            this.employmentCatLabel.Text = "Employment Category";
+            // 
+            // empStatusComboBox
+            // 
+            this.empStatusComboBox.FormattingEnabled = true;
+            this.empStatusComboBox.Items.AddRange(new object[] {
+            "Full-Time",
+            "Part-Time"});
+            this.empStatusComboBox.Location = new System.Drawing.Point(852, 249);
+            this.empStatusComboBox.Name = "empStatusComboBox";
+            this.empStatusComboBox.Size = new System.Drawing.Size(121, 24);
+            this.empStatusComboBox.TabIndex = 39;
+            // 
+            // empStatusLabel
+            // 
+            this.empStatusLabel.AutoSize = true;
+            this.empStatusLabel.Location = new System.Drawing.Point(681, 249);
+            this.empStatusLabel.Name = "empStatusLabel";
+            this.empStatusLabel.Size = new System.Drawing.Size(129, 17);
+            this.empStatusLabel.TabIndex = 38;
+            this.empStatusLabel.Text = "Employment Status";
+            // 
+            // payslipComboBox
+            // 
+            this.payslipComboBox.FormattingEnabled = true;
+            this.payslipComboBox.Items.AddRange(new object[] {
+            "To Be Printed",
+            "To Be Emailed"});
+            this.payslipComboBox.Location = new System.Drawing.Point(852, 274);
+            this.payslipComboBox.Name = "payslipComboBox";
+            this.payslipComboBox.Size = new System.Drawing.Size(121, 24);
+            this.payslipComboBox.TabIndex = 41;
+            // 
+            // payslipLabel
+            // 
+            this.payslipLabel.AutoSize = true;
+            this.payslipLabel.Location = new System.Drawing.Point(681, 274);
+            this.payslipLabel.Name = "payslipLabel";
+            this.payslipLabel.Size = new System.Drawing.Size(108, 17);
+            this.payslipLabel.TabIndex = 40;
+            this.payslipLabel.Text = "Payslip Delivery";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1075, 487);
+            this.Controls.Add(this.payslipComboBox);
+            this.Controls.Add(this.payslipLabel);
+            this.Controls.Add(this.empStatusComboBox);
+            this.Controls.Add(this.empStatusLabel);
+            this.Controls.Add(this.employCatComboBox);
+            this.Controls.Add(this.employmentCatLabel);
+            this.Controls.Add(this.empBasisComboBox);
+            this.Controls.Add(this.employBasisLabel);
+            this.Controls.Add(this.startDatePicker);
+            this.Controls.Add(this.startDateLabel);
+            this.Controls.Add(this.emailLabel);
+            this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.postcodeLabel);
             this.Controls.Add(this.postcodeTextBox);
             this.Controls.Add(this.stateLabel);
@@ -320,7 +459,7 @@
             this.Controls.Add(this.accoutnNumberTextBox);
             this.Controls.Add(this.bsbLabel);
             this.Controls.Add(this.bsbTextBox);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.taxTableComboBox);
             this.Controls.Add(this.taxTableLabel);
             this.Controls.Add(this.taxFileLabel);
             this.Controls.Add(this.TaxFileTextBox);
@@ -365,7 +504,7 @@
         private System.Windows.Forms.TextBox phoneNumberTextBox;
         private System.Windows.Forms.Label taxFileLabel;
         private System.Windows.Forms.TextBox TaxFileTextBox;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox taxTableComboBox;
         private System.Windows.Forms.Label taxTableLabel;
         private System.Windows.Forms.Label bsbLabel;
         private System.Windows.Forms.TextBox bsbTextBox;
@@ -377,6 +516,18 @@
         private System.Windows.Forms.TextBox stateTextBox;
         private System.Windows.Forms.Label postcodeLabel;
         private System.Windows.Forms.TextBox postcodeTextBox;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.DateTimePicker startDatePicker;
+        private System.Windows.Forms.Label startDateLabel;
+        private System.Windows.Forms.ComboBox empBasisComboBox;
+        private System.Windows.Forms.Label employBasisLabel;
+        private System.Windows.Forms.ComboBox employCatComboBox;
+        private System.Windows.Forms.Label employmentCatLabel;
+        private System.Windows.Forms.ComboBox empStatusComboBox;
+        private System.Windows.Forms.Label empStatusLabel;
+        private System.Windows.Forms.ComboBox payslipComboBox;
+        private System.Windows.Forms.Label payslipLabel;
     }
 }
 

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace pushToExt
 {
-    static class pushToExtClass
+    public static class pushToExtClass
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             test();
             
         }
 
-        static void test()
+        public static void test()
         {
             string[] lines = { "First line", "Second line", "Third line" };
             System.IO.File.WriteAllLines(@"C:\Users\Public\TestFolder\WriteLines.txt", lines);
