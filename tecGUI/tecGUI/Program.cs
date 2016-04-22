@@ -12,6 +12,7 @@ namespace tecGUI
         /// The main entry point for the application.
         /// Some more comments
         /// less comments
+        /// lessor comments
         /// </summary>
         [STAThread]
         static void Main()
