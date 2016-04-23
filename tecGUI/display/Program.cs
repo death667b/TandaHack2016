@@ -21,9 +21,10 @@ namespace display
         public static void runDisplay (string info) {
             dataDisplayForm.updateString(info);
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new dataDisplayForm());
-
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new dataDisplayForm());
+            dataDisplayForm form = new dataDisplayForm();
+            form.Show();
         }
     }
 }

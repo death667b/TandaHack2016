@@ -17,28 +17,6 @@ namespace pushToExt
             // Nothing to see here..  Move along..
         }
 
-        public static void test() // string formData  
-        {
-
-           // string formData = getFormData(); // FOR TESTING ONLY!
-
-           // writeToFile(formData);
-            
-            
-            
-            
-            
-            /*List<string> list = null; 
-            
-            DateTime thisDate1 = new DateTime(2017, 6, 10);
-            //writeToFile(77, "fgnuygtg", thisDate1);
-
-            list = readFromFile();
-            string testString = list[1];
-            MessageBox.Show(testString);*/
-        }
-
-
         /// <summary>
         /// Write data to data file 
         /// </summary>
@@ -81,37 +59,6 @@ namespace pushToExt
             }
 
             return list;
-        }
-
-        private static string getFormData()
-        {
-            string lastNameTextBox = "TESTlastNameTextBox";
-            string givenNamesTextBox = "TESTgivenNamesTextBox";
-
-            string[] AddressTextBox = new string[] { "Address line 1", "Address line 2", "Address line 3" }; //remove line
-            string AddressTextBoxString = "";
-            foreach (string line in AddressTextBox)
-            {
-                AddressTextBoxString += line + ", ";
-            }
-            string cityTextBox = "TESTcityTextBox";
-            string postcodeTextBox = "TESTpostcodeTextBox";
-            string genderComboBox = "TESTgenderComboBox";  //need to add .selected ??
-            string dateOfBirthPicker = "TESTdate"; // might be a datatime type
-            string bsbTextBox = "TESTbsbTextBox";
-            string accoutnNumberTextBox = "TESTaccoutnNumberTextBox";
-            string qualificationTextBox = "TESTqualificationTextBox";
-            string expiresCheckBox = "false"; //type boolean
-            string EmployeeIdTextBox = "TESTEmployeeIdTextBox";
-            string phoneNumberTextBox = "TESTphoneNumberTextBox";
-            string emailTextBox = "TESTemailTextBox";
-            string empBasisComboBox = "TESTempBasisComboBox"; // dropdown box
-            string employCatComboBox = "TESTemployCatComboBox"; // dropdown box
-            string empStatusComboBox = "TESTempStatusComboBox"; // dropdown box
-            string payslipComboBox = "TESTpayslipComboBox"; // dropdown box
-
-            string returnString = lastNameTextBox + ", " + givenNamesTextBox + ", " + AddressTextBoxString;
-            return returnString;
         }
     }
 }
