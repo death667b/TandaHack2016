@@ -42,6 +42,23 @@ namespace pushToExt
         }
 
         /// <summary>
+        /// Delete and create a new file then file with the List object
+        /// </summary>
+        /// <param name="list">List string object</param>
+        public static void overrightFile(List<string> list)
+        {
+            File.Delete(dataFileLocation);
+
+            using (StreamWriter writeToFile = File.CreateText(dataFileLocation))
+            {
+                foreach (string newLine in list)
+                {
+                    writeToFile.WriteLine(newLine);
+                }
+            }
+        }
+
+        /// <summary>
         /// Read all data from text file
         /// </summary>
         /// <returns>list of type string</string></returns>
