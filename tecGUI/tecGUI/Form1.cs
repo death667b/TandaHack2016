@@ -55,7 +55,8 @@ namespace tecGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(empBasisComboBox.Text.ToString().Equals(""))
+            if(empBasisComboBox.Text.ToString().Equals("") || employCatComboBox.Text.ToString().Equals("") || empStatusComboBox.Text.ToString().Equals("") 
+                    || payslipComboBox.Text.ToString().Equals("") || taxTableComboBox.Text.ToString().Equals("") || genderComboBox.Text.ToString().Equals(""))
             {
                 string message = "You are a muppet!";
                 string caption = "Error Detected in Input";
