@@ -1,6 +1,6 @@
 ﻿namespace tecGUI
 {
-    partial class Form1
+    partial class TEC
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.submitButton = new System.Windows.Forms.Button();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.lastNameLabel = new System.Windows.Forms.Label();
             this.givenNamesLabel = new System.Windows.Forms.Label();
@@ -77,15 +77,15 @@
             this.qualListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // button1
+            // submitButton
             // 
-            this.button1.Location = new System.Drawing.Point(482, 448);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 25);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.submitButton.Location = new System.Drawing.Point(482, 448);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(125, 25);
+            this.submitButton.TabIndex = 0;
+            this.submitButton.Text = "Submit";
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // lastNameTextBox
             // 
@@ -496,7 +496,7 @@
             this.qualListBox.TabIndex = 47;
             this.qualListBox.SelectedIndexChanged += new System.EventHandler(this.qualListBox_SelectedIndexChanged);
             // 
-            // Form1
+            // TEC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -547,9 +547,9 @@
             this.Controls.Add(this.givenNamesTextBox);
             this.Controls.Add(this.lastNameLabel);
             this.Controls.Add(this.lastNameTextBox);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.submitButton);
+            this.Name = "TEC";
+            this.Text = "Tanda Employee Card";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -557,7 +557,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.TextBox lastNameTextBox;
         private System.Windows.Forms.Label lastNameLabel;
         private System.Windows.Forms.Label givenNamesLabel;

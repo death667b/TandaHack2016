@@ -11,7 +11,7 @@ using pushToExt;
 
 namespace tecGUI
 {
-    public partial class Form1 : Form
+    public partial class TEC : Form
     {
         private int i = 0;
         private class qualification
@@ -39,7 +39,7 @@ namespace tecGUI
                 return qualificationTextBox.Text + " " + expDatePicker.Text;
             }
         }
-        public Form1()
+        public TEC()
         {
             InitializeComponent();
         }

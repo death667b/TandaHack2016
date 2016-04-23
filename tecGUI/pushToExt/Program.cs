@@ -10,7 +10,7 @@ namespace pushToExt
 {
     public static class pushToExtClass
     {
-        private static string dataFileLocation = @"..\\..\\..\\pushToExt\\data\\dataBase.txt";
+        private static string dataFileLocation = @"..\\..\\..\\pushToExt\\dataBase.txt";
         
         public static void Main(string[] args)
         {
