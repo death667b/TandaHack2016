@@ -24,7 +24,9 @@ namespace tecGUI
 
         private void empNamelistBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
+            
+            MessageBox.Show("ss");
         }
 
         private void fullTheEmpNameListBox()
@@ -33,7 +35,8 @@ namespace tecGUI
             {
                 foreach (string line in list)
                 {
-                    empNamelistBox.Items.Add(line);
+                    string[] data = line.Split(',');
+                    empNamelistBox.Items.Add(data[2] + ", " + data[1]);
                 }
             }
             else
