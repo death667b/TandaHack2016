@@ -7,30 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using pushToExt;
+
 
 namespace certWarning
 {
     public partial class Form1 : Form
     {
         List<string> employees = new List<string>();
-        static string[] infoData;
-        string chosenEmployee;
+        private string[] infoData;
         
         public Form1()
         {
             InitializeComponent();
+            employees = pushToExtClass.readFromFile();
+            infoData = employees[0].Split(',');
+            label8.Text = infoData[2].ToString() + "," + infoData[1];
+            label9.Text = " " + infoData[0];
+            string[] qual = infoData[21].Split(' ');
+            label10.Text = " " + qual[1];
+            label11.Text = " " + qual[2];
             
         }
 
-        /*
-        public Form1(String str)
-        {
-
-            InitializeComponent();
-            listString = str;
-            
-        }
-        */
         public static string readFile()
         {
 
@@ -45,14 +44,6 @@ namespace certWarning
             // index 22 = Qual2 Date
             // index 23 = Qual3 Date
             // index 0 = Employee ID
-
-            list.Add("EmployeeID1, FirstName, LastName, Email, Male, (DOB)23/04/2016, TaxFileNumber, Tax Free Threshold, PhoneNumber, BSB, AccountNumber, AddressLine1, AddressLine2, AddressLine3, City, State, Postcode, (StartDate)23/04/2016, Individual, Full-Time, To Be Printed, Qualification1 23/04/2016, Qualification2 23/04/2016, Qualification3 23/04/2016");
-            list.Add("EmployeeID2, FirstName, LastName, Email, Male, (DOB)23/04/2016, TaxFileNumber, Tax Free Threshold, PhoneNumber, BSB, AccountNumber, AddressLine1, AddressLine2, AddressLine3, City, State, Postcode, (StartDate)23/04/2016, Individual, Full-Time, To Be Printed, Qualification1 23/04/2016, Qualification2 23/04/2016, Qualification3 23/04/2016");
-            list.Add("EmployeeID3, FirstName, LastName, Email, Male, (DOB)23/04/2016, TaxFileNumber, Tax Free Threshold, PhoneNumber, BSB, AccountNumber, AddressLine1, AddressLine2, AddressLine3, City, State, Postcode, (StartDate)23/04/2016, Individual, Full-Time, To Be Printed, Qualification1 23/04/2016, Qualification2 23/04/2016, Qualification3 23/04/2016");
-            list.Add("EmployeeID4, FirstName, LastName, Email, Male, (DOB)23/04/2016, TaxFileNumber, Tax Free Threshold, PhoneNumber, BSB, AccountNumber, AddressLine1, AddressLine2, AddressLine3, City, State, Postcode, (StartDate)23/04/2016, Individual, Full-Time, To Be Printed, Qualification1 23/04/2016, Qualification2 23/04/2016, Qualification3 23/04/2016");
-            list.Add("EmployeeID5, FirstName, LastName, Email, Male, (DOB)23/04/2016, TaxFileNumber, Tax Free Threshold, PhoneNumber, BSB, AccountNumber, AddressLine1, AddressLine2, AddressLine3, City, State, Postcode, (StartDate)23/04/2016, Individual, Full-Time, To Be Printed, Qualification1 23/04/2016, Qualification2 23/04/2016, Qualification3 23/04/2016");
-
-
 
             //   string details = "EmployeeID1, FirstName, LastName, Email, Male, (DOB)23/04/2016, TaxFileNumber, Tax Free Threshold, PhoneNumber, BSB, AccountNumber, AddressLine1, AddressLine2, AddressLine3, City, State, Postcode, (StartDate)23/04/2016, Individual, Full-Time, To Be Printed, Qualification1 23/04/2016, Qualification2 23/04/2016, Qualification3 23/04/2016";
 
@@ -98,10 +89,14 @@ namespace certWarning
         }   // end readFile()
 
         public static void updateString(string[] list){
-            infoData = list;
+            //infoData = list;
  
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

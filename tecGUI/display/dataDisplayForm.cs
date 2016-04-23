@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using pushToExt;
+using tecGUI;
+
 // stuff
 namespace display {
     public partial class dataDisplayForm : Form {
@@ -39,6 +41,13 @@ namespace display {
 
         private void confirm_Click(object sender, EventArgs e) {
             pushToExtClass.writeToFile(info);
+            TandaUser tandauser = new TandaUser()
+            {
+                name = basicInfo[1] + basicInfo[2]
+            };
+            TandaClient tcli = new TandaClient("mitchellazj@gmail.com", "tandahack2016");
+            tcli.Connect(true);
+            tcli.AddUser(tandauser);
             this.Close(); 
         }
         public static void updateString(string stuff) {
