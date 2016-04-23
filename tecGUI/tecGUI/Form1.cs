@@ -40,7 +40,12 @@ namespace tecGUI
 
             public string getString()
             {
-                return xqualificationTextBox + " " + xexpDatePicker;
+                if (xexpiresCheckBox)
+                {
+
+                    return xqualificationTextBox + " " + xexpDatePicker;
+                }
+                return xqualificationTextBox + " No Expiry.";
             }
         }
         public TEC()
