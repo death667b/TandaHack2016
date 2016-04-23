@@ -15,6 +15,9 @@ namespace tecGUI
     public partial class TEC : Form
     {
         private int i = 0;
+
+        qualification[] q = new qualification[10];
+
         private class qualification
         {
             private TextBox qualificationTextBox;
@@ -37,7 +40,7 @@ namespace tecGUI
 
             public string getString()
             {
-                return qualificationTextBox.Text + " " + expDatePicker.Text;
+                return this.qualificationTextBox.Text + " " + expDatePicker.Text;
             }
         }
         public TEC()
@@ -51,28 +54,32 @@ namespace tecGUI
             str += EmployeeIdTextBox.Text.ToString() + ", ";
             str += givenNamesTextBox.Text.ToString() + ", ";
             str += lastNameTextBox.Text.ToString() + ", ";
+            str += emailTextBox.Text.ToString() + ", ";
+            str += genderComboBox.SelectedItem.ToString() + ", ";
+            str += TaxFileTextBox.Text.ToString() + ", ";
+            str += taxTableComboBox.SelectedItem.ToString() + ", ";
+            str += phoneNumberTextBox.Text.ToString() + ", ";
+            str += bsbTextBox.Text.ToString() + ", ";
+            str += accoutnNumberTextBox.Text.ToString() + ", ";
             foreach (string line in AddressTextBox.Lines)
             {
                 str += line + ", ";
             }
-            str += genderComboBox.SelectedItem.ToString() + ", ";
-            str += phoneNumberTextBox.Text.ToString() + ", ";
-            str += TaxFileTextBox.Text.ToString() + ", ";
-            str += taxTableComboBox.SelectedItem.ToString() + ", ";
-            str += bsbTextBox.Text.ToString() + ", ";
-            str += accoutnNumberTextBox.Text.ToString() + ", ";
             str += cityTextBox.Text.ToString() + ", ";
             str += stateTextBox.Text.ToString() + ", ";
             str += postcodeTextBox.Text.ToString() + ", ";
-            str += emailTextBox.Text.ToString() + ", ";
             str += startDatePicker.Text.ToString() + ", ";
             str += empBasisComboBox.SelectedItem.ToString() + ", ";
             str += empStatusComboBox.SelectedItem.ToString() + ", ";
             str += payslipComboBox.SelectedItem.ToString() + ", ";
-            str += qualificationTextBox.Text.ToString() + ", ";
-            str += expDatePicker.Text.ToString() + ", ";
-            str += expiresCheckBox.Checked.ToString() + ", ";
-            str += qualListBox.Text.ToString() + ", ";
+            //str += expDatePicker.Text.ToString() + ", ";
+            //str += expiresCheckBox.Checked.ToString() + ", ";
+           // str += qualListBox.Text.ToString() + ", ";
+            for (int j = 0; j < i; j++ )
+            {
+                str += q[j].getString() + ", ";
+                //str += line + ", ";
+            }
 
 
             pushToExtClass.writeToFile(str);
@@ -99,7 +106,6 @@ namespace tecGUI
             {
                 return; // error
             }
-            qualification[] q = new qualification[10];
             q[i] = new qualification(qualificationTextBox, expDatePicker, expiresCheckBox, i);
             qualListBox.Items.Add(q[i].getString());
             i++;
