@@ -41,6 +41,7 @@ namespace tecGUI
             this.deleteButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.addButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // empNamelistBox
@@ -68,6 +69,7 @@ namespace tecGUI
             this.qualistBox.Name = "qualistBox";
             this.qualistBox.Size = new System.Drawing.Size(180, 277);
             this.qualistBox.TabIndex = 2;
+            this.qualistBox.SelectedIndexChanged += new System.EventHandler(this.qualistBox_SelectedIndexChanged);
             // 
             // quatextBox
             // 
@@ -103,25 +105,27 @@ namespace tecGUI
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(473, 148);
+            this.updateButton.Location = new System.Drawing.Point(473, 187);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(75, 23);
             this.updateButton.TabIndex = 7;
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(473, 197);
+            this.deleteButton.Location = new System.Drawing.Point(473, 236);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
             this.deleteButton.TabIndex = 8;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(473, 248);
+            this.closeButton.Location = new System.Drawing.Point(473, 283);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 23);
             this.closeButton.TabIndex = 9;
@@ -138,11 +142,22 @@ namespace tecGUI
             this.label4.TabIndex = 10;
             this.label4.Text = "Update Employee Qualifications";
             // 
+            // addButton
+            // 
+            this.addButton.Location = new System.Drawing.Point(473, 142);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.TabIndex = 11;
+            this.addButton.Text = "Add";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
             // Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(652, 354);
+            this.Controls.Add(this.addButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.deleteButton);
@@ -174,5 +189,6 @@ namespace tecGUI
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button addButton;
     }
 }
