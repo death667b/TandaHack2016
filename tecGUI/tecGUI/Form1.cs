@@ -55,6 +55,26 @@ namespace tecGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(empBasisComboBox.Text.ToString().Equals(""))
+            {
+                string message = "You are a muppet!";
+                string caption = "Error Detected in Input";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                DialogResult result;
+
+                // Displays the MessageBox.
+
+                result = MessageBox.Show(message, caption, buttons);
+
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    return;
+                    // Closes the parent form.
+
+                    //this.Close();
+
+                }
+            }
             string str = "";
             str += EmployeeIdTextBox.Text.ToString() + ", ";
             str += givenNamesTextBox.Text.ToString() + ", ";
