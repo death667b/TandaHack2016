@@ -95,8 +95,5 @@ namespace tecGUI
             expiresCheckBox.Checked = false;
         }
 
-        private void qualListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
     }
 }
