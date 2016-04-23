@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using pushToExt;
-
+// stuff
 namespace display {
     public partial class dataDisplayForm : Form {
         static string info;
@@ -30,7 +30,7 @@ namespace display {
                 "    Bank Account Number: " + basicInfo[9] + "\nAddress Line 1: " + basicInfo[10] + "\nAddress Line 2: " +
                 basicInfo[11] + "\nAddress Line 3: " + basicInfo[12] + "\nCity: " + basicInfo[13] + "    State: "
                 + basicInfo[14] + "    Postcode: " + basicInfo[15] + "\nStart Date: " + basicInfo[16] +
-                "\nEmployment Basis: " + basicInfo[17] + "    Employment Status: " + basicInfo[18] + "\nPayslip: " + basicInfo[19];
+                "\nEmployment Basis: " + basicInfo[17] + "    Employment Status: " + basicInfo[18] + "\nPayslip: " + basicInfo[19] + quals;
         }
         
         private void displayLabel_Click(object sender, EventArgs e) {           
