@@ -79,9 +79,10 @@
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(482, 448);
+            this.submitButton.Location = new System.Drawing.Point(362, 364);
+            this.submitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(125, 25);
+            this.submitButton.Size = new System.Drawing.Size(94, 20);
             this.submitButton.TabIndex = 0;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
@@ -89,59 +90,67 @@
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(110, 24);
+            this.lastNameTextBox.Location = new System.Drawing.Point(82, 20);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(205, 22);
+            this.lastNameTextBox.Size = new System.Drawing.Size(155, 20);
             this.lastNameTextBox.TabIndex = 1;
             // 
             // lastNameLabel
             // 
             this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.Location = new System.Drawing.Point(17, 24);
+            this.lastNameLabel.Location = new System.Drawing.Point(13, 20);
+            this.lastNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(76, 17);
+            this.lastNameLabel.Size = new System.Drawing.Size(58, 13);
             this.lastNameLabel.TabIndex = 2;
             this.lastNameLabel.Text = "Last Name";
             // 
             // givenNamesLabel
             // 
             this.givenNamesLabel.AutoSize = true;
-            this.givenNamesLabel.Location = new System.Drawing.Point(326, 24);
+            this.givenNamesLabel.Location = new System.Drawing.Point(244, 20);
+            this.givenNamesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.givenNamesLabel.Name = "givenNamesLabel";
-            this.givenNamesLabel.Size = new System.Drawing.Size(93, 17);
+            this.givenNamesLabel.Size = new System.Drawing.Size(71, 13);
             this.givenNamesLabel.TabIndex = 4;
             this.givenNamesLabel.Text = "Given Names";
             // 
             // givenNamesTextBox
             // 
-            this.givenNamesTextBox.Location = new System.Drawing.Point(437, 24);
+            this.givenNamesTextBox.Location = new System.Drawing.Point(328, 20);
+            this.givenNamesTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.givenNamesTextBox.Name = "givenNamesTextBox";
-            this.givenNamesTextBox.Size = new System.Drawing.Size(205, 22);
+            this.givenNamesTextBox.Size = new System.Drawing.Size(155, 20);
             this.givenNamesTextBox.TabIndex = 3;
             // 
             // addressLabel
             // 
             this.addressLabel.AutoSize = true;
-            this.addressLabel.Location = new System.Drawing.Point(17, 61);
+            this.addressLabel.Location = new System.Drawing.Point(13, 50);
+            this.addressLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(60, 17);
+            this.addressLabel.Size = new System.Drawing.Size(45, 13);
             this.addressLabel.TabIndex = 6;
             this.addressLabel.Text = "Address";
             // 
             // AddressTextBox
             // 
-            this.AddressTextBox.Location = new System.Drawing.Point(110, 61);
+            this.AddressTextBox.Location = new System.Drawing.Point(82, 50);
+            this.AddressTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddressTextBox.Multiline = true;
             this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(320, 64);
+            this.AddressTextBox.Size = new System.Drawing.Size(241, 53);
             this.AddressTextBox.TabIndex = 5;
+            this.AddressTextBox.TextChanged += new System.EventHandler(this.AddressTextBox_TextChanged);
             // 
             // genderLabel
             // 
             this.genderLabel.AutoSize = true;
-            this.genderLabel.Location = new System.Drawing.Point(17, 210);
+            this.genderLabel.Location = new System.Drawing.Point(13, 171);
+            this.genderLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(56, 17);
+            this.genderLabel.Size = new System.Drawing.Size(42, 13);
             this.genderLabel.TabIndex = 8;
             this.genderLabel.Text = "Gender";
             this.genderLabel.Click += new System.EventHandler(this.genderLabel_Click);
@@ -152,75 +161,84 @@
             this.genderComboBox.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.genderComboBox.Location = new System.Drawing.Point(110, 210);
+            this.genderComboBox.Location = new System.Drawing.Point(82, 171);
+            this.genderComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.genderComboBox.Name = "genderComboBox";
-            this.genderComboBox.Size = new System.Drawing.Size(121, 24);
+            this.genderComboBox.Size = new System.Drawing.Size(92, 21);
             this.genderComboBox.TabIndex = 9;
             // 
             // dobLabel
             // 
             this.dobLabel.AutoSize = true;
-            this.dobLabel.Location = new System.Drawing.Point(17, 249);
+            this.dobLabel.Location = new System.Drawing.Point(13, 202);
+            this.dobLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dobLabel.Name = "dobLabel";
-            this.dobLabel.Size = new System.Drawing.Size(87, 17);
+            this.dobLabel.Size = new System.Drawing.Size(66, 13);
             this.dobLabel.TabIndex = 10;
             this.dobLabel.Text = "Date of Birth";
             // 
             // dateOfBirthPicker
             // 
             this.dateOfBirthPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateOfBirthPicker.Location = new System.Drawing.Point(110, 249);
+            this.dateOfBirthPicker.Location = new System.Drawing.Point(82, 202);
+            this.dateOfBirthPicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateOfBirthPicker.Name = "dateOfBirthPicker";
-            this.dateOfBirthPicker.Size = new System.Drawing.Size(200, 22);
+            this.dateOfBirthPicker.Size = new System.Drawing.Size(151, 20);
             this.dateOfBirthPicker.TabIndex = 11;
             // 
             // employeeIdLabel
             // 
             this.employeeIdLabel.AutoSize = true;
-            this.employeeIdLabel.Location = new System.Drawing.Point(681, 24);
+            this.employeeIdLabel.Location = new System.Drawing.Point(511, 20);
+            this.employeeIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employeeIdLabel.Name = "employeeIdLabel";
-            this.employeeIdLabel.Size = new System.Drawing.Size(85, 17);
+            this.employeeIdLabel.Size = new System.Drawing.Size(65, 13);
             this.employeeIdLabel.TabIndex = 13;
             this.employeeIdLabel.Text = "Employee Id";
             // 
             // EmployeeIdTextBox
             // 
-            this.EmployeeIdTextBox.Location = new System.Drawing.Point(801, 24);
+            this.EmployeeIdTextBox.Location = new System.Drawing.Point(601, 20);
+            this.EmployeeIdTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EmployeeIdTextBox.Name = "EmployeeIdTextBox";
-            this.EmployeeIdTextBox.Size = new System.Drawing.Size(205, 22);
+            this.EmployeeIdTextBox.Size = new System.Drawing.Size(155, 20);
             this.EmployeeIdTextBox.TabIndex = 12;
             // 
             // phoneNumberLabel
             // 
             this.phoneNumberLabel.AutoSize = true;
-            this.phoneNumberLabel.Location = new System.Drawing.Point(681, 64);
+            this.phoneNumberLabel.Location = new System.Drawing.Point(511, 52);
+            this.phoneNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.phoneNumberLabel.Name = "phoneNumberLabel";
-            this.phoneNumberLabel.Size = new System.Drawing.Size(103, 17);
+            this.phoneNumberLabel.Size = new System.Drawing.Size(78, 13);
             this.phoneNumberLabel.TabIndex = 15;
             this.phoneNumberLabel.Text = "Phone Number";
             // 
             // phoneNumberTextBox
             // 
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(801, 64);
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(601, 52);
+            this.phoneNumberTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(205, 22);
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(155, 20);
             this.phoneNumberTextBox.TabIndex = 14;
             // 
             // taxFileLabel
             // 
             this.taxFileLabel.AutoSize = true;
             this.taxFileLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.taxFileLabel.Location = new System.Drawing.Point(681, 332);
+            this.taxFileLabel.Location = new System.Drawing.Point(511, 270);
+            this.taxFileLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.taxFileLabel.Name = "taxFileLabel";
-            this.taxFileLabel.Size = new System.Drawing.Size(111, 17);
+            this.taxFileLabel.Size = new System.Drawing.Size(84, 13);
             this.taxFileLabel.TabIndex = 17;
             this.taxFileLabel.Text = "Tax File Number";
             // 
             // TaxFileTextBox
             // 
-            this.TaxFileTextBox.Location = new System.Drawing.Point(801, 332);
+            this.TaxFileTextBox.Location = new System.Drawing.Point(601, 270);
+            this.TaxFileTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TaxFileTextBox.Name = "TaxFileTextBox";
-            this.TaxFileTextBox.Size = new System.Drawing.Size(205, 22);
+            this.TaxFileTextBox.Size = new System.Drawing.Size(155, 20);
             this.TaxFileTextBox.TabIndex = 16;
             // 
             // taxTableComboBox
@@ -229,17 +247,19 @@
             this.taxTableComboBox.Items.AddRange(new object[] {
             "Tax Free Threshold",
             "Non-Tax Free Threshold"});
-            this.taxTableComboBox.Location = new System.Drawing.Point(801, 368);
+            this.taxTableComboBox.Location = new System.Drawing.Point(601, 299);
+            this.taxTableComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.taxTableComboBox.Name = "taxTableComboBox";
-            this.taxTableComboBox.Size = new System.Drawing.Size(121, 24);
+            this.taxTableComboBox.Size = new System.Drawing.Size(92, 21);
             this.taxTableComboBox.TabIndex = 19;
             // 
             // taxTableLabel
             // 
             this.taxTableLabel.AutoSize = true;
-            this.taxTableLabel.Location = new System.Drawing.Point(681, 368);
+            this.taxTableLabel.Location = new System.Drawing.Point(511, 299);
+            this.taxTableLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.taxTableLabel.Name = "taxTableLabel";
-            this.taxTableLabel.Size = new System.Drawing.Size(71, 17);
+            this.taxTableLabel.Size = new System.Drawing.Size(55, 13);
             this.taxTableLabel.TabIndex = 18;
             this.taxTableLabel.Text = "Tax Table";
             // 
@@ -247,115 +267,129 @@
             // 
             this.bsbLabel.AutoSize = true;
             this.bsbLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bsbLabel.Location = new System.Drawing.Point(17, 281);
+            this.bsbLabel.Location = new System.Drawing.Point(13, 228);
+            this.bsbLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bsbLabel.Name = "bsbLabel";
-            this.bsbLabel.Size = new System.Drawing.Size(35, 17);
+            this.bsbLabel.Size = new System.Drawing.Size(28, 13);
             this.bsbLabel.TabIndex = 21;
             this.bsbLabel.Text = "BSB";
             // 
             // bsbTextBox
             // 
-            this.bsbTextBox.Location = new System.Drawing.Point(110, 281);
+            this.bsbTextBox.Location = new System.Drawing.Point(82, 228);
+            this.bsbTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bsbTextBox.Name = "bsbTextBox";
-            this.bsbTextBox.Size = new System.Drawing.Size(205, 22);
+            this.bsbTextBox.Size = new System.Drawing.Size(155, 20);
             this.bsbTextBox.TabIndex = 20;
             // 
             // accountNumberLabel
             // 
             this.accountNumberLabel.AutoSize = true;
             this.accountNumberLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.accountNumberLabel.Location = new System.Drawing.Point(344, 281);
+            this.accountNumberLabel.Location = new System.Drawing.Point(258, 228);
+            this.accountNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.accountNumberLabel.Name = "accountNumberLabel";
-            this.accountNumberLabel.Size = new System.Drawing.Size(113, 17);
+            this.accountNumberLabel.Size = new System.Drawing.Size(87, 13);
             this.accountNumberLabel.TabIndex = 23;
             this.accountNumberLabel.Text = "Account Number";
             // 
             // accoutnNumberTextBox
             // 
-            this.accoutnNumberTextBox.Location = new System.Drawing.Point(463, 281);
+            this.accoutnNumberTextBox.Location = new System.Drawing.Point(347, 228);
+            this.accoutnNumberTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.accoutnNumberTextBox.Name = "accoutnNumberTextBox";
-            this.accoutnNumberTextBox.Size = new System.Drawing.Size(205, 22);
+            this.accoutnNumberTextBox.Size = new System.Drawing.Size(155, 20);
             this.accoutnNumberTextBox.TabIndex = 22;
             // 
             // cityLabel
             // 
             this.cityLabel.AutoSize = true;
-            this.cityLabel.Location = new System.Drawing.Point(17, 144);
+            this.cityLabel.Location = new System.Drawing.Point(13, 117);
+            this.cityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cityLabel.Name = "cityLabel";
-            this.cityLabel.Size = new System.Drawing.Size(31, 17);
+            this.cityLabel.Size = new System.Drawing.Size(24, 13);
             this.cityLabel.TabIndex = 25;
             this.cityLabel.Text = "City";
             // 
             // cityTextBox
             // 
-            this.cityTextBox.Location = new System.Drawing.Point(110, 141);
+            this.cityTextBox.Location = new System.Drawing.Point(82, 115);
+            this.cityTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cityTextBox.Name = "cityTextBox";
-            this.cityTextBox.Size = new System.Drawing.Size(320, 22);
+            this.cityTextBox.Size = new System.Drawing.Size(241, 20);
             this.cityTextBox.TabIndex = 24;
             // 
             // stateLabel
             // 
             this.stateLabel.AutoSize = true;
-            this.stateLabel.Location = new System.Drawing.Point(17, 179);
+            this.stateLabel.Location = new System.Drawing.Point(13, 145);
+            this.stateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.stateLabel.Name = "stateLabel";
-            this.stateLabel.Size = new System.Drawing.Size(41, 17);
+            this.stateLabel.Size = new System.Drawing.Size(32, 13);
             this.stateLabel.TabIndex = 27;
             this.stateLabel.Text = "State";
             // 
             // stateTextBox
             // 
-            this.stateTextBox.Location = new System.Drawing.Point(110, 179);
+            this.stateTextBox.Location = new System.Drawing.Point(82, 145);
+            this.stateTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.stateTextBox.Name = "stateTextBox";
-            this.stateTextBox.Size = new System.Drawing.Size(85, 22);
+            this.stateTextBox.Size = new System.Drawing.Size(65, 20);
             this.stateTextBox.TabIndex = 26;
             // 
             // postcodeLabel
             // 
             this.postcodeLabel.AutoSize = true;
-            this.postcodeLabel.Location = new System.Drawing.Point(252, 179);
+            this.postcodeLabel.Location = new System.Drawing.Point(189, 145);
+            this.postcodeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.postcodeLabel.Name = "postcodeLabel";
-            this.postcodeLabel.Size = new System.Drawing.Size(67, 17);
+            this.postcodeLabel.Size = new System.Drawing.Size(52, 13);
             this.postcodeLabel.TabIndex = 29;
             this.postcodeLabel.Text = "Postcode";
             // 
             // postcodeTextBox
             // 
-            this.postcodeTextBox.Location = new System.Drawing.Point(345, 179);
+            this.postcodeTextBox.Location = new System.Drawing.Point(259, 145);
+            this.postcodeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.postcodeTextBox.Name = "postcodeTextBox";
-            this.postcodeTextBox.Size = new System.Drawing.Size(85, 22);
+            this.postcodeTextBox.Size = new System.Drawing.Size(65, 20);
             this.postcodeTextBox.TabIndex = 28;
             // 
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(681, 108);
+            this.emailLabel.Location = new System.Drawing.Point(511, 88);
+            this.emailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(42, 17);
+            this.emailLabel.Size = new System.Drawing.Size(32, 13);
             this.emailLabel.TabIndex = 31;
             this.emailLabel.Text = "Email";
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(801, 108);
+            this.emailTextBox.Location = new System.Drawing.Point(601, 88);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(205, 22);
+            this.emailTextBox.Size = new System.Drawing.Size(155, 20);
             this.emailTextBox.TabIndex = 30;
             // 
             // startDatePicker
             // 
             this.startDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.startDatePicker.Location = new System.Drawing.Point(801, 411);
+            this.startDatePicker.Location = new System.Drawing.Point(601, 334);
+            this.startDatePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.startDatePicker.Name = "startDatePicker";
-            this.startDatePicker.Size = new System.Drawing.Size(200, 22);
+            this.startDatePicker.Size = new System.Drawing.Size(151, 20);
             this.startDatePicker.TabIndex = 33;
             // 
             // startDateLabel
             // 
             this.startDateLabel.AutoSize = true;
             this.startDateLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.startDateLabel.Location = new System.Drawing.Point(681, 411);
+            this.startDateLabel.Location = new System.Drawing.Point(511, 334);
+            this.startDateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.startDateLabel.Name = "startDateLabel";
-            this.startDateLabel.Size = new System.Drawing.Size(72, 17);
+            this.startDateLabel.Size = new System.Drawing.Size(55, 13);
             this.startDateLabel.TabIndex = 32;
             this.startDateLabel.Text = "Start Date";
             // 
@@ -365,17 +399,19 @@
             this.empBasisComboBox.Items.AddRange(new object[] {
             "Individual",
             "Contract"});
-            this.empBasisComboBox.Location = new System.Drawing.Point(852, 194);
+            this.empBasisComboBox.Location = new System.Drawing.Point(639, 158);
+            this.empBasisComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.empBasisComboBox.Name = "empBasisComboBox";
-            this.empBasisComboBox.Size = new System.Drawing.Size(121, 24);
+            this.empBasisComboBox.Size = new System.Drawing.Size(92, 21);
             this.empBasisComboBox.TabIndex = 35;
             // 
             // employBasisLabel
             // 
             this.employBasisLabel.AutoSize = true;
-            this.employBasisLabel.Location = new System.Drawing.Point(681, 194);
+            this.employBasisLabel.Location = new System.Drawing.Point(511, 158);
+            this.employBasisLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employBasisLabel.Name = "employBasisLabel";
-            this.employBasisLabel.Size = new System.Drawing.Size(123, 17);
+            this.employBasisLabel.Size = new System.Drawing.Size(92, 13);
             this.employBasisLabel.TabIndex = 34;
             this.employBasisLabel.Text = "Employment Basis";
             // 
@@ -385,17 +421,19 @@
             this.employCatComboBox.Items.AddRange(new object[] {
             "Permanent",
             "Casual"});
-            this.employCatComboBox.Location = new System.Drawing.Point(852, 221);
+            this.employCatComboBox.Location = new System.Drawing.Point(639, 180);
+            this.employCatComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.employCatComboBox.Name = "employCatComboBox";
-            this.employCatComboBox.Size = new System.Drawing.Size(121, 24);
+            this.employCatComboBox.Size = new System.Drawing.Size(92, 21);
             this.employCatComboBox.TabIndex = 37;
             // 
             // employmentCatLabel
             // 
             this.employmentCatLabel.AutoSize = true;
-            this.employmentCatLabel.Location = new System.Drawing.Point(681, 221);
+            this.employmentCatLabel.Location = new System.Drawing.Point(511, 180);
+            this.employmentCatLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employmentCatLabel.Name = "employmentCatLabel";
-            this.employmentCatLabel.Size = new System.Drawing.Size(146, 17);
+            this.employmentCatLabel.Size = new System.Drawing.Size(109, 13);
             this.employmentCatLabel.TabIndex = 36;
             this.employmentCatLabel.Text = "Employment Category";
             // 
@@ -405,17 +443,19 @@
             this.empStatusComboBox.Items.AddRange(new object[] {
             "Full-Time",
             "Part-Time"});
-            this.empStatusComboBox.Location = new System.Drawing.Point(852, 249);
+            this.empStatusComboBox.Location = new System.Drawing.Point(639, 202);
+            this.empStatusComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.empStatusComboBox.Name = "empStatusComboBox";
-            this.empStatusComboBox.Size = new System.Drawing.Size(121, 24);
+            this.empStatusComboBox.Size = new System.Drawing.Size(92, 21);
             this.empStatusComboBox.TabIndex = 39;
             // 
             // empStatusLabel
             // 
             this.empStatusLabel.AutoSize = true;
-            this.empStatusLabel.Location = new System.Drawing.Point(681, 249);
+            this.empStatusLabel.Location = new System.Drawing.Point(511, 202);
+            this.empStatusLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.empStatusLabel.Name = "empStatusLabel";
-            this.empStatusLabel.Size = new System.Drawing.Size(129, 17);
+            this.empStatusLabel.Size = new System.Drawing.Size(97, 13);
             this.empStatusLabel.TabIndex = 38;
             this.empStatusLabel.Text = "Employment Status";
             // 
@@ -425,17 +465,19 @@
             this.payslipComboBox.Items.AddRange(new object[] {
             "To Be Printed",
             "To Be Emailed"});
-            this.payslipComboBox.Location = new System.Drawing.Point(852, 274);
+            this.payslipComboBox.Location = new System.Drawing.Point(639, 223);
+            this.payslipComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.payslipComboBox.Name = "payslipComboBox";
-            this.payslipComboBox.Size = new System.Drawing.Size(121, 24);
+            this.payslipComboBox.Size = new System.Drawing.Size(92, 21);
             this.payslipComboBox.TabIndex = 41;
             // 
             // payslipLabel
             // 
             this.payslipLabel.AutoSize = true;
-            this.payslipLabel.Location = new System.Drawing.Point(681, 274);
+            this.payslipLabel.Location = new System.Drawing.Point(511, 223);
+            this.payslipLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.payslipLabel.Name = "payslipLabel";
-            this.payslipLabel.Size = new System.Drawing.Size(108, 17);
+            this.payslipLabel.Size = new System.Drawing.Size(81, 13);
             this.payslipLabel.TabIndex = 40;
             this.payslipLabel.Text = "Payslip Delivery";
             // 
@@ -443,34 +485,38 @@
             // 
             this.qualificationLabel.AutoSize = true;
             this.qualificationLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.qualificationLabel.Location = new System.Drawing.Point(17, 332);
+            this.qualificationLabel.Location = new System.Drawing.Point(13, 270);
+            this.qualificationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.qualificationLabel.Name = "qualificationLabel";
-            this.qualificationLabel.Size = new System.Drawing.Size(86, 17);
+            this.qualificationLabel.Size = new System.Drawing.Size(65, 13);
             this.qualificationLabel.TabIndex = 43;
             this.qualificationLabel.Text = "Qualification";
             // 
             // qualificationTextBox
             // 
-            this.qualificationTextBox.Location = new System.Drawing.Point(110, 332);
+            this.qualificationTextBox.Location = new System.Drawing.Point(82, 270);
+            this.qualificationTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.qualificationTextBox.Name = "qualificationTextBox";
-            this.qualificationTextBox.Size = new System.Drawing.Size(205, 22);
+            this.qualificationTextBox.Size = new System.Drawing.Size(155, 20);
             this.qualificationTextBox.TabIndex = 42;
             // 
             // expDatePicker
             // 
             this.expDatePicker.Enabled = false;
             this.expDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.expDatePicker.Location = new System.Drawing.Point(427, 332);
+            this.expDatePicker.Location = new System.Drawing.Point(320, 270);
+            this.expDatePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.expDatePicker.Name = "expDatePicker";
-            this.expDatePicker.Size = new System.Drawing.Size(124, 22);
+            this.expDatePicker.Size = new System.Drawing.Size(94, 20);
             this.expDatePicker.TabIndex = 44;
             // 
             // expiresCheckBox
             // 
             this.expiresCheckBox.AutoSize = true;
-            this.expiresCheckBox.Location = new System.Drawing.Point(345, 332);
+            this.expiresCheckBox.Location = new System.Drawing.Point(259, 270);
+            this.expiresCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.expiresCheckBox.Name = "expiresCheckBox";
-            this.expiresCheckBox.Size = new System.Drawing.Size(76, 21);
+            this.expiresCheckBox.Size = new System.Drawing.Size(60, 17);
             this.expiresCheckBox.TabIndex = 45;
             this.expiresCheckBox.Text = "Expires";
             this.expiresCheckBox.UseVisualStyleBackColor = true;
@@ -478,9 +524,10 @@
             // 
             // qualAddButton
             // 
-            this.qualAddButton.Location = new System.Drawing.Point(567, 332);
+            this.qualAddButton.Location = new System.Drawing.Point(425, 270);
+            this.qualAddButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.qualAddButton.Name = "qualAddButton";
-            this.qualAddButton.Size = new System.Drawing.Size(75, 23);
+            this.qualAddButton.Size = new System.Drawing.Size(56, 19);
             this.qualAddButton.TabIndex = 46;
             this.qualAddButton.Text = "Add";
             this.qualAddButton.UseVisualStyleBackColor = true;
@@ -489,18 +536,17 @@
             // qualListBox
             // 
             this.qualListBox.FormattingEnabled = true;
-            this.qualListBox.ItemHeight = 16;
-            this.qualListBox.Location = new System.Drawing.Point(22, 359);
+            this.qualListBox.Location = new System.Drawing.Point(16, 292);
+            this.qualListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.qualListBox.Name = "qualListBox";
-            this.qualListBox.Size = new System.Drawing.Size(399, 84);
+            this.qualListBox.Size = new System.Drawing.Size(300, 69);
             this.qualListBox.TabIndex = 47;
-            this.qualListBox.SelectedIndexChanged += new System.EventHandler(this.qualListBox_SelectedIndexChanged);
             // 
             // TEC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 487);
+            this.ClientSize = new System.Drawing.Size(806, 396);
             this.Controls.Add(this.qualListBox);
             this.Controls.Add(this.qualAddButton);
             this.Controls.Add(this.expiresCheckBox);
@@ -548,6 +594,7 @@
             this.Controls.Add(this.lastNameLabel);
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.submitButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TEC";
             this.Text = "Tanda Employee Card";
             this.ResumeLayout(false);

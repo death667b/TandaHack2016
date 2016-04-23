@@ -82,8 +82,9 @@
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(75, 29);
             this.editButton.TabIndex = 4;
-            this.editButton.Text = "Edit";
+            this.editButton.Text = "Cancel";
             this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // dataDisplayForm
             // 

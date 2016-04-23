@@ -95,5 +95,8 @@ namespace tecGUI
             expiresCheckBox.Checked = false;
         }
 
+        private void AddressTextBox_TextChanged(object sender, EventArgs e) {
+
+        }
     }
 }
