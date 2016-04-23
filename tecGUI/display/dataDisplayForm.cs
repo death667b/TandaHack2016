@@ -14,17 +14,17 @@ namespace display {
         static string info;
         string[] basicInfo;
         string demoData = "Jones, Indiana, a place, of gold, somewhere, 1111111, Male, 1980, 111111, 111111, 1, 12341121234, indy@fisnios, contract" +
-            ", casual, part time, mail, 1234567890, 0";
+            ", casual, part time, mail, 1234567890, 00,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0";
         public dataDisplayForm() {
             InitializeComponent();
             basicInfo = demoData.Split(',');
-            displayLabel.Text = "Employee Id: " + basicInfo[0] + "\nGiven Names: " + basicInfo[1] + "    Last Name: " + basicInfo[2] + "\nAddress: " +
-                basicInfo[2] + "\nCity: " + basicInfo[3] + "    State: " + basicInfo[4] + "    Postcode: " + basicInfo[5] +
-                "\nGender: " + basicInfo[6] + "    Date of Birth: " + basicInfo[7] + "\nBSB: " + basicInfo[8] +
-                "    Bank Account Number: " + basicInfo[9] + "\nEmployee Id: " + basicInfo[10] + "\nPhone Number: " +
-                basicInfo[11] + "    Email: " + basicInfo[12] + "\nEmployment Basis: " + basicInfo[13] + "    Employment Category: "
-                + basicInfo[14] + "    Employment Status: " + basicInfo[15] + "\nPayslip Delivery: " + basicInfo[16] +
-                "\nTax File Number: " + basicInfo[17] + "    Tax Table: " + basicInfo[18];
+            displayLabel.Text = "Employee Id: " + basicInfo[0] + "\nGiven Names: " + basicInfo[1] + "    Last Name: " + basicInfo[2] + 
+                "\nEmail: " + basicInfo[3] + "    Gender: " + basicInfo[4] + "\nTax File Number: " + basicInfo[5] +
+                "    Tax Table: " + basicInfo[6] + "\nPhone Number: " + basicInfo[7] + "\nBSB: " + basicInfo[8] +
+                "    Bank Account Number: " + basicInfo[9] + "\nAddress 1: " + basicInfo[10] + "\nAddress 2: " +
+                basicInfo[11] + "\nAddress 3: " + basicInfo[12] + "\nCity: " + basicInfo[13] + "    State: "
+                + basicInfo[14] + "    Postcode: " + basicInfo[15] + "\nStart Date: " + basicInfo[16] +
+                "\nEmployment Basis: " + basicInfo[17] + "    Employment Status: " + basicInfo[18] + "\nPayslip: " + basicInfo[19];
         }
         
         private void displayLabel_Click(object sender, EventArgs e) {           
@@ -34,7 +34,8 @@ namespace display {
         }
 
         private void confirm_Click(object sender, EventArgs e) {
-            pushToExtClass.writeToFile(info); 
+            pushToExtClass.writeToFile(info);
+            Application.Exit(); 
         }
         public static void updateString(string stuff) {
             info = stuff;
