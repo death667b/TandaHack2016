@@ -13,6 +13,32 @@ namespace tecGUI
 {
     public partial class Form1 : Form
     {
+        private int i = 0;
+        private class qualification
+        {
+            private TextBox qualificationTextBox;
+            private DateTimePicker expDatePicker;
+            private CheckBox expiresCheckBox;
+            private int id;
+
+            public qualification(TextBox qualificationTextBox, DateTimePicker expDatePicker, CheckBox expiresCheckBox, int id)
+            {
+                this.qualificationTextBox = qualificationTextBox;
+                this.expDatePicker = expDatePicker;
+                this.expiresCheckBox = expiresCheckBox;
+                this.id = id;
+            }
+
+            public TextBox getText()
+            {
+                return qualificationTextBox;
+            }
+
+            public string getString()
+            {
+                return qualificationTextBox.Text + " " + expDatePicker.Text;
+            }
+        }
         public Form1()
         {
             InitializeComponent();
@@ -21,6 +47,39 @@ namespace tecGUI
         private void button1_Click(object sender, EventArgs e)
         {
             pushToExtClass.test();
+        }
+
+        private void genderLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void expiresCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(expiresCheckBox.Checked) {
+                expDatePicker.Enabled = true;
+            } else
+            {
+                expDatePicker.Enabled = false;
+            }
+        }
+
+        private void qualAddButton_Click(object sender, EventArgs e)
+        {
+            if(qualificationTextBox.Equals(""))
+            {
+                return; // error
+            }
+            qualification[] q = new qualification[10];
+            q[i] = new qualification(qualificationTextBox, expDatePicker, expiresCheckBox, i);
+            qualListBox.Items.Add(q[i].getString());
+            i++;
+            qualificationTextBox.Text = "";
+            expiresCheckBox.Checked = false;
+        }
+
+        private void qualListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }
