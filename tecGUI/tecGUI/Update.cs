@@ -19,19 +19,44 @@ namespace tecGUI
         {
             InitializeComponent();
             pullTheListIn(pushToExtClass.readFromFile());
+            fullTheEmpNameListBox();
         }
 
         private void empNamelistBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (string line in list)
+
+        }
+
+        private void fullTheEmpNameListBox()
+        {
+            if (list[0] != "No Data")
             {
-                empNamelistBox.Items.Add(line);
+                foreach (string line in list)
+                {
+                    empNamelistBox.Items.Add(line);
+                }
+            }
+            else
+            {
+                empNamelistBox.Items.Add("No Data");
+                empNamelistBox.Items.Add("Go and add some!");
+                empNamelistBox.Enabled = false;
+                qualistBox.Enabled = false;
+                quatextBox.Enabled = false;
+                expiretextBox.Enabled = false;
+                updateButton.Enabled = false;
+                deleteButton.Enabled = false;
             }
         }
 
-        public void pullTheListIn(List<string> list)
+        private void pullTheListIn(List<string> list)
         {
             this.list = list;
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
         }
     }
 }
