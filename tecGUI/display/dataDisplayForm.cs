@@ -12,13 +12,12 @@ using pushToExt;
 namespace display {
     public partial class dataDisplayForm : Form {
         static string info;
-        string quals;
         string[] basicInfo;
         string demoData = "Jones, Indiana, a place, of gold, somewhere, 1111111, Male, 1980, 111111, 111111, 1, 12341121234, indy@fisnios, contract" +
             ", casual, part time, mail, 1234567890, 00,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0";
         public dataDisplayForm() {
             InitializeComponent();
-            basicInfo = demoData.Split(',');
+            basicInfo = info.Split(',');
             
             for(int j = 20; j < basicInfo.Length; j++) {
                 qualsListBox.Items.Add("Qualification " + (j-19) + ": " + basicInfo[j]);
@@ -40,14 +39,14 @@ namespace display {
 
         private void confirm_Click(object sender, EventArgs e) {
             pushToExtClass.writeToFile(info);
-            Application.Exit(); 
+            this.Close(); 
         }
         public static void updateString(string stuff) {
             info = stuff;
         }
 
         private void editButton_Click(object sender, EventArgs e) {
-            Application.Exit();
+            this.Close();
         }
 
         private void qualsListBox_SelectedIndexChanged(object sender, EventArgs e) {
