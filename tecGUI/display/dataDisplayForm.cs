@@ -19,7 +19,7 @@ namespace display {
             InitializeComponent();
             basicInfo = info.Split(',');
             
-            for(int j = 20; j < basicInfo.Length; j++) {
+            for(int j = 21; j < basicInfo.Length; j++) {
                 qualsListBox.Items.Add("Qualification " + (j-19) + ": " + basicInfo[j]);
             }
             displayLabel.Text = "Employee Id: " + basicInfo[0] + "\nFirst Name: " + basicInfo[1] + "    Last Name: " + basicInfo[2] +
