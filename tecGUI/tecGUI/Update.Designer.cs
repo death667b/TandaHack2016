@@ -1,4 +1,6 @@
-﻿namespace tecGUI
+﻿using System.Collections.Generic;
+
+namespace tecGUI
 {
     partial class Update
     {
@@ -48,6 +50,7 @@
             this.empNamelistBox.Name = "empNamelistBox";
             this.empNamelistBox.Size = new System.Drawing.Size(151, 277);
             this.empNamelistBox.TabIndex = 0;
+            this.empNamelistBox.SelectedIndexChanged += new System.EventHandler(this.empNamelistBox_SelectedIndexChanged);
             // 
             // label1
             // 
