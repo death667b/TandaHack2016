@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using pushToExt;
+using display;
 
 namespace tecGUI
 {
@@ -46,16 +47,22 @@ namespace tecGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //pushToExtClass.test();
             string str = "";
             str += EmployeeIdTextBox.Text.ToString() + ", ";
             str += givenNamesTextBox.Text.ToString() + ", ";
             str += lastNameTextBox.Text.ToString() + ", ";
-            str += AddressTextBox.Text.ToString() + ", ";
+            foreach (string line in AddressTextBox.Lines)
+            {
+                str += line + ", ";
+            }
             str += genderComboBox.SelectedItem.ToString() + ", ";
             str += phoneNumberTextBox.Text.ToString() + ", ";
             str += TaxFileTextBox.Text.ToString() + ", ";
             str += taxTableComboBox.SelectedItem.ToString() + ", ";
+
+
+
+
             pushToExtClass.writeToFile(str);
         }
 

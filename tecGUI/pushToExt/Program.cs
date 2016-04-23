@@ -20,9 +20,9 @@ namespace pushToExt
         public static void test() // string formData  
         {
 
-            string formData = getFormData(); // FOR TESTING ONLY!
+           // string formData = getFormData(); // FOR TESTING ONLY!
 
-            writeToFile(formData);
+           // writeToFile(formData);
             
             
             
