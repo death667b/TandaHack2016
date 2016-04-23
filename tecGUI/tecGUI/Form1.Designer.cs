@@ -69,6 +69,12 @@
             this.empStatusLabel = new System.Windows.Forms.Label();
             this.payslipComboBox = new System.Windows.Forms.ComboBox();
             this.payslipLabel = new System.Windows.Forms.Label();
+            this.qualificationLabel = new System.Windows.Forms.Label();
+            this.qualificationTextBox = new System.Windows.Forms.TextBox();
+            this.expDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.expiresCheckBox = new System.Windows.Forms.CheckBox();
+            this.qualAddButton = new System.Windows.Forms.Button();
+            this.qualListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // button1
@@ -133,11 +139,12 @@
             // genderLabel
             // 
             this.genderLabel.AutoSize = true;
-            this.genderLabel.Location = new System.Drawing.Point(17, 267);
+            this.genderLabel.Location = new System.Drawing.Point(17, 210);
             this.genderLabel.Name = "genderLabel";
             this.genderLabel.Size = new System.Drawing.Size(56, 17);
             this.genderLabel.TabIndex = 8;
             this.genderLabel.Text = "Gender";
+            this.genderLabel.Click += new System.EventHandler(this.genderLabel_Click);
             // 
             // genderComboBox
             // 
@@ -145,7 +152,7 @@
             this.genderComboBox.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.genderComboBox.Location = new System.Drawing.Point(110, 267);
+            this.genderComboBox.Location = new System.Drawing.Point(110, 210);
             this.genderComboBox.Name = "genderComboBox";
             this.genderComboBox.Size = new System.Drawing.Size(121, 24);
             this.genderComboBox.TabIndex = 9;
@@ -153,7 +160,7 @@
             // dobLabel
             // 
             this.dobLabel.AutoSize = true;
-            this.dobLabel.Location = new System.Drawing.Point(17, 303);
+            this.dobLabel.Location = new System.Drawing.Point(17, 249);
             this.dobLabel.Name = "dobLabel";
             this.dobLabel.Size = new System.Drawing.Size(87, 17);
             this.dobLabel.TabIndex = 10;
@@ -162,7 +169,7 @@
             // dateOfBirthPicker
             // 
             this.dateOfBirthPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateOfBirthPicker.Location = new System.Drawing.Point(110, 303);
+            this.dateOfBirthPicker.Location = new System.Drawing.Point(110, 249);
             this.dateOfBirthPicker.Name = "dateOfBirthPicker";
             this.dateOfBirthPicker.Size = new System.Drawing.Size(200, 22);
             this.dateOfBirthPicker.TabIndex = 11;
@@ -240,7 +247,7 @@
             // 
             this.bsbLabel.AutoSize = true;
             this.bsbLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bsbLabel.Location = new System.Drawing.Point(17, 347);
+            this.bsbLabel.Location = new System.Drawing.Point(17, 281);
             this.bsbLabel.Name = "bsbLabel";
             this.bsbLabel.Size = new System.Drawing.Size(35, 17);
             this.bsbLabel.TabIndex = 21;
@@ -248,7 +255,7 @@
             // 
             // bsbTextBox
             // 
-            this.bsbTextBox.Location = new System.Drawing.Point(110, 347);
+            this.bsbTextBox.Location = new System.Drawing.Point(110, 281);
             this.bsbTextBox.Name = "bsbTextBox";
             this.bsbTextBox.Size = new System.Drawing.Size(205, 22);
             this.bsbTextBox.TabIndex = 20;
@@ -257,7 +264,7 @@
             // 
             this.accountNumberLabel.AutoSize = true;
             this.accountNumberLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.accountNumberLabel.Location = new System.Drawing.Point(344, 347);
+            this.accountNumberLabel.Location = new System.Drawing.Point(344, 281);
             this.accountNumberLabel.Name = "accountNumberLabel";
             this.accountNumberLabel.Size = new System.Drawing.Size(113, 17);
             this.accountNumberLabel.TabIndex = 23;
@@ -265,7 +272,7 @@
             // 
             // accoutnNumberTextBox
             // 
-            this.accoutnNumberTextBox.Location = new System.Drawing.Point(463, 347);
+            this.accoutnNumberTextBox.Location = new System.Drawing.Point(463, 281);
             this.accoutnNumberTextBox.Name = "accoutnNumberTextBox";
             this.accoutnNumberTextBox.Size = new System.Drawing.Size(205, 22);
             this.accoutnNumberTextBox.TabIndex = 22;
@@ -432,11 +439,74 @@
             this.payslipLabel.TabIndex = 40;
             this.payslipLabel.Text = "Payslip Delivery";
             // 
+            // qualificationLabel
+            // 
+            this.qualificationLabel.AutoSize = true;
+            this.qualificationLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.qualificationLabel.Location = new System.Drawing.Point(17, 332);
+            this.qualificationLabel.Name = "qualificationLabel";
+            this.qualificationLabel.Size = new System.Drawing.Size(86, 17);
+            this.qualificationLabel.TabIndex = 43;
+            this.qualificationLabel.Text = "Qualification";
+            // 
+            // qualificationTextBox
+            // 
+            this.qualificationTextBox.Location = new System.Drawing.Point(110, 332);
+            this.qualificationTextBox.Name = "qualificationTextBox";
+            this.qualificationTextBox.Size = new System.Drawing.Size(205, 22);
+            this.qualificationTextBox.TabIndex = 42;
+            // 
+            // expDatePicker
+            // 
+            this.expDatePicker.Enabled = false;
+            this.expDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.expDatePicker.Location = new System.Drawing.Point(427, 332);
+            this.expDatePicker.Name = "expDatePicker";
+            this.expDatePicker.Size = new System.Drawing.Size(124, 22);
+            this.expDatePicker.TabIndex = 44;
+            // 
+            // expiresCheckBox
+            // 
+            this.expiresCheckBox.AutoSize = true;
+            this.expiresCheckBox.Location = new System.Drawing.Point(345, 332);
+            this.expiresCheckBox.Name = "expiresCheckBox";
+            this.expiresCheckBox.Size = new System.Drawing.Size(76, 21);
+            this.expiresCheckBox.TabIndex = 45;
+            this.expiresCheckBox.Text = "Expires";
+            this.expiresCheckBox.UseVisualStyleBackColor = true;
+            this.expiresCheckBox.CheckedChanged += new System.EventHandler(this.expiresCheckBox_CheckedChanged);
+            // 
+            // qualAddButton
+            // 
+            this.qualAddButton.Location = new System.Drawing.Point(567, 332);
+            this.qualAddButton.Name = "qualAddButton";
+            this.qualAddButton.Size = new System.Drawing.Size(75, 23);
+            this.qualAddButton.TabIndex = 46;
+            this.qualAddButton.Text = "Add";
+            this.qualAddButton.UseVisualStyleBackColor = true;
+            this.qualAddButton.Click += new System.EventHandler(this.qualAddButton_Click);
+            // 
+            // qualListBox
+            // 
+            this.qualListBox.FormattingEnabled = true;
+            this.qualListBox.ItemHeight = 16;
+            this.qualListBox.Location = new System.Drawing.Point(22, 359);
+            this.qualListBox.Name = "qualListBox";
+            this.qualListBox.Size = new System.Drawing.Size(399, 84);
+            this.qualListBox.TabIndex = 47;
+            this.qualListBox.SelectedIndexChanged += new System.EventHandler(this.qualListBox_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1075, 487);
+            this.Controls.Add(this.qualListBox);
+            this.Controls.Add(this.qualAddButton);
+            this.Controls.Add(this.expiresCheckBox);
+            this.Controls.Add(this.expDatePicker);
+            this.Controls.Add(this.qualificationLabel);
+            this.Controls.Add(this.qualificationTextBox);
             this.Controls.Add(this.payslipComboBox);
             this.Controls.Add(this.payslipLabel);
             this.Controls.Add(this.empStatusComboBox);
@@ -528,6 +598,12 @@
         private System.Windows.Forms.Label empStatusLabel;
         private System.Windows.Forms.ComboBox payslipComboBox;
         private System.Windows.Forms.Label payslipLabel;
+        private System.Windows.Forms.Label qualificationLabel;
+        private System.Windows.Forms.TextBox qualificationTextBox;
+        private System.Windows.Forms.DateTimePicker expDatePicker;
+        private System.Windows.Forms.CheckBox expiresCheckBox;
+        private System.Windows.Forms.Button qualAddButton;
+        private System.Windows.Forms.ListBox qualListBox;
     }
 }
 
