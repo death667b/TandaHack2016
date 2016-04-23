@@ -14,6 +14,7 @@ namespace tecGUI
         /// Some more comments
         /// less comments
         /// lessor comments
+        /// pew pew
         /// </summary>
         [STAThread]
         static void Main()

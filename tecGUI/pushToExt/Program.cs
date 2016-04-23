@@ -20,9 +20,9 @@ namespace pushToExt
         public static void test() // string formData  
         {
 
-            string formData = getFormData(); // FOR TESTING ONLY!
+           // string formData = getFormData(); // FOR TESTING ONLY!
 
-            writeToFile(formData);
+           // writeToFile(formData);
             
             
             
@@ -43,7 +43,7 @@ namespace pushToExt
         /// Write data to data file 
         /// </summary>
         /// <param name="newLine">String - New line to enter to text file</param>
-        private static void writeToFile(string newLine)
+        public static void writeToFile(string newLine)   
         {
             if (!File.Exists(dataFileLocation))
             {
@@ -95,6 +95,20 @@ namespace pushToExt
                 AddressTextBoxString += line + ", ";
             }
             string cityTextBox = "TESTcityTextBox";
+            string postcodeTextBox = "TESTpostcodeTextBox";
+            string genderComboBox = "TESTgenderComboBox";  //need to add .selected ??
+            string dateOfBirthPicker = "TESTdate"; // might be a datatime type
+            string bsbTextBox = "TESTbsbTextBox";
+            string accoutnNumberTextBox = "TESTaccoutnNumberTextBox";
+            string qualificationTextBox = "TESTqualificationTextBox";
+            string expiresCheckBox = "false"; //type boolean
+            string EmployeeIdTextBox = "TESTEmployeeIdTextBox";
+            string phoneNumberTextBox = "TESTphoneNumberTextBox";
+            string emailTextBox = "TESTemailTextBox";
+            string empBasisComboBox = "TESTempBasisComboBox"; // dropdown box
+            string employCatComboBox = "TESTemployCatComboBox"; // dropdown box
+            string empStatusComboBox = "TESTempStatusComboBox"; // dropdown box
+            string payslipComboBox = "TESTpayslipComboBox"; // dropdown box
 
             string returnString = lastNameTextBox + ", " + givenNamesTextBox + ", " + AddressTextBoxString;
             return returnString;
