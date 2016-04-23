@@ -25,19 +25,15 @@ namespace certWarning
             InitializeComponent();
         }
         
+        /*
         public Form1(String str)
         {
 
             InitializeComponent();
             listString = str;
             
-            
-            
-            
-            
-
         }
-
+        */
        
         
     }
