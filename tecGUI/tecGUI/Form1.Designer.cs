@@ -494,7 +494,6 @@
             this.qualListBox.Name = "qualListBox";
             this.qualListBox.Size = new System.Drawing.Size(399, 84);
             this.qualListBox.TabIndex = 47;
-            this.qualListBox.SelectedIndexChanged += new System.EventHandler(this.qualListBox_SelectedIndexChanged);
             // 
             // TEC
             // 

@@ -59,8 +59,20 @@ namespace tecGUI
             str += phoneNumberTextBox.Text.ToString() + ", ";
             str += TaxFileTextBox.Text.ToString() + ", ";
             str += taxTableComboBox.SelectedItem.ToString() + ", ";
-
-
+            str += bsbTextBox.Text.ToString() + ", ";
+            str += accoutnNumberTextBox.Text.ToString() + ", ";
+            str += cityTextBox.Text.ToString() + ", ";
+            str += stateTextBox.Text.ToString() + ", ";
+            str += postcodeTextBox.Text.ToString() + ", ";
+            str += emailTextBox.Text.ToString() + ", ";
+            str += startDatePicker.Text.ToString() + ", ";
+            str += empBasisComboBox.SelectedItem.ToString() + ", ";
+            str += empStatusComboBox.SelectedItem.ToString() + ", ";
+            str += payslipComboBox.SelectedItem.ToString() + ", ";
+            str += qualificationTextBox.Text.ToString() + ", ";
+            str += expDatePicker.Text.ToString() + ", ";
+            str += expiresCheckBox.Checked.ToString() + ", ";
+            str += qualListBox.Text.ToString() + ", ";
 
 
             pushToExtClass.writeToFile(str);
