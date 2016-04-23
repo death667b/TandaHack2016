@@ -64,15 +64,22 @@ namespace pushToExt
         /// <returns>list of type string</string></returns>
         public static List<string> readFromFile()
         {
-            List<string> list = new List<string>();            
-            
-            using (StreamReader readFromFile = File.OpenText(dataFileLocation))
+            List<string> list = new List<string>();
+
+            if (File.Exists(dataFileLocation))
             {
-                string stringLine = "";
-                while ((stringLine = readFromFile.ReadLine()) != null)
+                using (StreamReader readFromFile = File.OpenText(dataFileLocation))
                 {
-                    list.Add(stringLine);
+                    string stringLine = "";
+                    while ((stringLine = readFromFile.ReadLine()) != null)
+                    {
+                        list.Add(stringLine);
+                    }
                 }
+            }
+            else
+            {
+                list.Add("No Data");
             }
 
             return list;
