@@ -14,13 +14,14 @@ namespace tecGUI
         /// Some more comments
         /// less comments
         /// lessor comments
+        /// pew pew
         /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new TEC());
             
         }
     }
