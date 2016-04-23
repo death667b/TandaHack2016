@@ -151,5 +151,11 @@ namespace tecGUI
             Update form = new Update();
             form.Show();
         }
+
+        private void checkQualificationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            certWarning.Form1 form = new certWarning.Form1();
+            form.Show();
+        }
     }
 }
