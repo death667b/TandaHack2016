@@ -45,7 +45,7 @@ namespace pushToExt
         /// Delete and create a new file then file with the List object
         /// </summary>
         /// <param name="list">List string object</param>
-        public static void overRightFile(List<string> list)
+        public static void overWriteFile(List<string> list)
         {
             File.Delete(dataFileLocation);
 
