@@ -111,8 +111,8 @@ namespace tecGUI
                 str += q[j].getString() + ", ";
             }
 
-
-            pushToExtClass.writeToFile(str);
+            display.Program.runDisplay(str);
+            //pushToExtClass.writeToFile(str);
         }
 
         private void genderLabel_Click(object sender, EventArgs e)
