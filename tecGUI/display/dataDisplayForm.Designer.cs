@@ -44,8 +44,8 @@
             // 
             // confirm
             // 
-            this.confirm.Location = new System.Drawing.Point(246, 295);
-            this.confirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.confirm.Location = new System.Drawing.Point(236, 344);
+            this.confirm.Margin = new System.Windows.Forms.Padding(4);
             this.confirm.Name = "confirm";
             this.confirm.Size = new System.Drawing.Size(100, 28);
             this.confirm.TabIndex = 1;
@@ -78,25 +78,26 @@
             // 
             // editButton
             // 
-            this.editButton.Location = new System.Drawing.Point(394, 294);
+            this.editButton.Location = new System.Drawing.Point(424, 343);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(75, 29);
             this.editButton.TabIndex = 4;
-            this.editButton.Text = "Edit";
+            this.editButton.Text = "Cancel";
             this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // dataDisplayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 329);
+            this.ClientSize = new System.Drawing.Size(722, 377);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.confirmLabel);
             this.Controls.Add(this.confirm);
             this.Controls.Add(this.displayLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "dataDisplayForm";
             this.Text = "dataDisplayForm";
             this.ResumeLayout(false);
