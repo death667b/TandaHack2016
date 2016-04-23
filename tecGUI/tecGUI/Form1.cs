@@ -146,8 +146,10 @@ namespace tecGUI
             }
         }
 
-        private void AddressTextBox_TextChanged(object sender, EventArgs e) {
-
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Update form = new Update();
+            form.Show();
         }
     }
 }
