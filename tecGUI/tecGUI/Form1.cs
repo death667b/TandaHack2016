@@ -106,15 +106,18 @@ namespace tecGUI
 
         private void qualAddButton_Click(object sender, EventArgs e)
         {
-            if(qualificationTextBox.Equals(""))
+            if (qualificationTextBox.Text.ToString().Equals(""))
             {
                 return; // error
             }
-            q[i] = new qualification(qualificationTextBox, expDatePicker, expiresCheckBox, i);
-            qualListBox.Items.Add(q[i].getString());
-            i++;
-            qualificationTextBox.Text = "";
-            expiresCheckBox.Checked = false;
+            else
+            {
+                q[i] = new qualification(qualificationTextBox, expDatePicker, expiresCheckBox, i);
+                qualListBox.Items.Add(q[i].getString());
+                i++;
+                qualificationTextBox.Text = "";
+                expiresCheckBox.Checked = false;
+            }
         }
 
         private void AddressTextBox_TextChanged(object sender, EventArgs e) {
