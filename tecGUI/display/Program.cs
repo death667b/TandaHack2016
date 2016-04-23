@@ -13,9 +13,9 @@ namespace display
         /// </summary>
         [STAThread]
         static void Main() {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new dataDisplayForm());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new dataDisplayForm());
         }
         
         public static void runDisplay (string info) {

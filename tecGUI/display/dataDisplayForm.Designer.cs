@@ -28,6 +28,7 @@
             this.confirmLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.editButton = new System.Windows.Forms.Button();
+            this.qualsListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // displayLabel
@@ -44,7 +45,7 @@
             // 
             // confirm
             // 
-            this.confirm.Location = new System.Drawing.Point(236, 344);
+            this.confirm.Location = new System.Drawing.Point(236, 421);
             this.confirm.Margin = new System.Windows.Forms.Padding(4);
             this.confirm.Name = "confirm";
             this.confirm.Size = new System.Drawing.Size(100, 28);
@@ -78,7 +79,7 @@
             // 
             // editButton
             // 
-            this.editButton.Location = new System.Drawing.Point(424, 343);
+            this.editButton.Location = new System.Drawing.Point(408, 420);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(75, 29);
             this.editButton.TabIndex = 4;
@@ -86,11 +87,22 @@
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
+            // qualsListBox
+            // 
+            this.qualsListBox.FormattingEnabled = true;
+            this.qualsListBox.ItemHeight = 16;
+            this.qualsListBox.Location = new System.Drawing.Point(19, 346);
+            this.qualsListBox.Name = "qualsListBox";
+            this.qualsListBox.Size = new System.Drawing.Size(227, 68);
+            this.qualsListBox.TabIndex = 5;
+            this.qualsListBox.SelectedIndexChanged += new System.EventHandler(this.qualsListBox_SelectedIndexChanged);
+            // 
             // dataDisplayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 377);
+            this.ClientSize = new System.Drawing.Size(722, 457);
+            this.Controls.Add(this.qualsListBox);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.confirmLabel);
@@ -112,5 +124,6 @@
         private System.Windows.Forms.Label confirmLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.ListBox qualsListBox;
     }
 }

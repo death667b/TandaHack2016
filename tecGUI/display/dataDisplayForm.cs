@@ -18,11 +18,10 @@ namespace display {
             ", casual, part time, mail, 1234567890, 00,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0";
         public dataDisplayForm() {
             InitializeComponent();
-            basicInfo = info.Split(',');
+            basicInfo = demoData.Split(',');
             
             for(int j = 20; j < basicInfo.Length; j++) {
-                quals += "Qualification " + (j-19) + ": " + basicInfo[j];
-
+                qualsListBox.Items.Add("Qualification " + (j-19) + ": " + basicInfo[j]);
             }
             displayLabel.Text = "Employee Id: " + basicInfo[0] + "\nFirst Name: " + basicInfo[1] + "    Last Name: " + basicInfo[2] +
                 "\nEmail: " + basicInfo[3] + "    Gender: " + basicInfo[4] + "\nTax File Number: " + basicInfo[5] +
@@ -30,7 +29,7 @@ namespace display {
                 "    Bank Account Number: " + basicInfo[9] + "\nAddress Line 1: " + basicInfo[10] + "\nAddress Line 2: " +
                 basicInfo[11] + "\nAddress Line 3: " + basicInfo[12] + "\nCity: " + basicInfo[13] + "    State: "
                 + basicInfo[14] + "    Postcode: " + basicInfo[15] + "\nStart Date: " + basicInfo[16] +
-                "\nEmployment Basis: " + basicInfo[17] + "    Employment Status: " + basicInfo[18] + "\nPayslip: " + basicInfo[19] + quals;
+                "\nEmployment Basis: " + basicInfo[17] + "    Employment Status: " + basicInfo[18] + "\nPayslip: " + basicInfo[19] + "\n";// + quals;
         }
         
         private void displayLabel_Click(object sender, EventArgs e) {           
@@ -49,6 +48,10 @@ namespace display {
 
         private void editButton_Click(object sender, EventArgs e) {
             Application.Exit();
+        }
+
+        private void qualsListBox_SelectedIndexChanged(object sender, EventArgs e) {
+
         }
     }
 }
