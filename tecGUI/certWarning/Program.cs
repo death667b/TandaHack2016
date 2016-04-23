@@ -25,6 +25,16 @@ namespace certWarning
            
         }
 
+        public static void runWarning(string[] info)
+        {
+            Form1.updateString(info);
+            Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new dataDisplayForm());
+            Form1 form = new Form1();
+            form.Show();
+        }
+
         
 
         /*
