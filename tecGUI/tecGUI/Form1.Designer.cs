@@ -549,6 +549,7 @@
             this.checkQualificationsToolStripMenuItem.Name = "checkQualificationsToolStripMenuItem";
             this.checkQualificationsToolStripMenuItem.Size = new System.Drawing.Size(155, 24);
             this.checkQualificationsToolStripMenuItem.Text = "Check Qualifications";
+            this.checkQualificationsToolStripMenuItem.Click += new System.EventHandler(this.checkQualificationsToolStripMenuItem_Click);
             // 
             // TEC
             // 
